@@ -9,9 +9,9 @@
       v-model="selectedOption"
       @change="handleOptionChange"
       id="countries"
-      class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
     >
-      <option selected>Choose a country</option>
+      <option selected>Countries</option>
       <template v-for="(items, index) in optionsData">
         <option :key="index" :value="items.id">{{ items.name }}</option>
       </template>
@@ -24,7 +24,7 @@ export default {
   name: "Base-Select",
   data() {
     return {
-      selectedOption: "Choose a country",
+      selectedOption: "Countries",
     };
   },
   props: {

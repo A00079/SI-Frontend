@@ -12,7 +12,7 @@
             </div>
           </div>
         </a>
-        <div class="flex flex row items-center justify-center cursor-pointer hover:bg-gray-200 p-2 rounded">
+        <div class="flex flex row items-center justify-center cursor-pointer hover:bg-gray-100 p-2 rounded">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
