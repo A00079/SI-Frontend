@@ -1,9 +1,6 @@
 <template>
   <div class="home">
     <section>
-      <Navbar navTitle="Sportz" navSubTitle="Interactive" />
-    </section>
-    <section>
       <div class="bg-gray-50 flex items-center">
         <section class="bg-cover bg-center bg-gray-50 py-24 w-full">
           <div class="container mx-auto text-left text-white">
@@ -19,9 +16,12 @@
                 </p>
                 <div class="w-2/3">
                   <BaseSelect
+                    code="id"
+                    discription="name"
+                    defaultOption="Countries"
                     selectLabel="Select an country"
                     :optionsData="countriesList"
-                    @selected-country="displayCountryDetail"
+                    @selected-option="displayCountryDetail"
                   />
                 </div>
               </div>
@@ -94,7 +94,6 @@
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue";
 import BaseSelect from "@/components/BaseSelect.vue";
 import NoDataSkeleton from "@/components/NoDataSkeleton.vue";
 
@@ -109,7 +108,6 @@ export default {
     };
   },
   components: {
-    Navbar,
     BaseSelect,
     NoDataSkeleton,
   },

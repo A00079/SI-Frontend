@@ -4,15 +4,24 @@
       <div
         class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center justify-between"
       >
-        <a class="flex items-center text-gray-900 mb-4 md:mb-0">
-          <div class="ml-3 flex flex-col justify-start">
-            <div class="text-2xl text-green-500 font-bold">{{ navTitle }}</div>
-            <div class="text-lg text-gray-400 leading-none">
-              {{ navSubTitle }}
+        <router-link to="/">
+          <a
+            class="flex items-center text-gray-900 mb-4 md:mb-0 cursor-pointer"
+          >
+            <div class="ml-3 flex flex-col justify-start">
+              <div class="text-2xl text-green-500 font-bold">
+                {{ navTitle }}
+              </div>
+              <div class="text-lg text-gray-400 leading-none">
+                {{ navSubTitle }}
+              </div>
             </div>
-          </div>
-        </a>
-        <div class="flex flex row items-center justify-center cursor-pointer hover:bg-gray-100 p-2 rounded">
+          </a>
+        </router-link>
+        <div
+          v-if="isVisiable"
+          class="flex flex row items-center justify-center cursor-pointer hover:bg-gray-100 p-2 rounded"
+        >
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +38,9 @@
               />
             </svg>
           </div>
-          <div class="text-black">Add Countries</div>
+          <router-link to="/add-country">
+            <div class="text-black">Add Countries</div>
+          </router-link>
         </div>
       </div>
     </header>
@@ -47,6 +58,27 @@ export default {
     navSubTitle: {
       type: String,
       required: true,
+    },
+  },
+  data() {
+    return {
+      isVisiable: true,
+    };
+  },
+  watch: {
+    "$route"(newVal) {
+      this.handleAddContryVisible();
+    },
+  },
+  methods: {
+    handleAddContryVisible() {
+      if (window.location.href.split("#").length) {
+        if (window.location.href.split("#")[1] == "/add-country") {
+          this.isVisiable = false;
+        }else{
+          this.isVisiable = true;
+        }
+      }
     },
   },
 };
