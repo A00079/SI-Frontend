@@ -66,7 +66,7 @@ export default {
     };
   },
   watch: {
-    "$route"(newVal) {
+    "$route"() {
       this.handleAddContryVisible();
     },
   },

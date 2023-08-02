@@ -6,7 +6,7 @@
       :modelData="countriesList"
     />
     <div>
-      <div class="max-w-2xl mx-auto bg-white p-10">
+      <div class="max-w-2xl mx-auto bg-white p-8">
         <div>
           <div class="grid gap-6 mb-6 lg:grid-cols-2">
             <div>
@@ -122,7 +122,7 @@
               alt="Preview"
             />
           </div>
-          <div class="flex flex row items-center space-x-3">
+          <div class="flex flex row items-center space-x-3 pb-20">
             <router-link to="/">
               <button
                 class="text-black bg-gray-200 border border-gray-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto mt-2 px-10 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"

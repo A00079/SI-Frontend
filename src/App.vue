@@ -1,10 +1,10 @@
 <template>
-  <div id="app" class="relative h-screen">
+  <div id="app" class="h-screen">
     <section>
       <Navbar navTitle="Sportz" navSubTitle="Interactive" />
     </section>
     <router-view />
-    <section class="absolute bottom-0 w-full">
+    <section class="w-full">
       <AppFooter />
     </section>
   </div>

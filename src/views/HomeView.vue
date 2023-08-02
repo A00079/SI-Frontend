@@ -8,7 +8,7 @@
               <div class="w-1/2">
                 <h1 class="text-5xl font-bold mb-6 text-gray-600">
                   Welcome to
-                  <span class="text-green-500">Sport</span> Interactive
+                  <span class="text-green-500">Sportz</span> Interactive
                 </h1>
                 <p class="text-xl mb-6 text-gray-600">
                   Select a option from below list of countries to view more

@@ -4,7 +4,7 @@
       class="w-full text-gray-600 body-font bg-gray-50 border-t border-gray-200"
     >
       <div
-        class="container w-full px-5 py-6 mx-auto flex items-center sm:flex-row flex-col"
+        class="container w-full px-5 py-2 mx-auto flex items-center sm:flex-row flex-col"
       >
         <router-link to="/">
           <a
@@ -100,7 +100,7 @@
 
 <script>
 export default {
-  name: "Footer",
+  name: "App-Footer",
 };
 </script>
 
