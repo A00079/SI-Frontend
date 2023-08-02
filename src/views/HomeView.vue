@@ -133,7 +133,6 @@ export default {
           .collection(`api/v1/country`)
           .readone(data)
           .then((response) => {
-            console.log("response --->", response);
             if (response.status == "success") {
               this.isLoading = false;
               this.selectedCountry = response.result;
