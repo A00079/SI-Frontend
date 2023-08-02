@@ -19,6 +19,12 @@ export default {
     Navbar,
     AppFooter,
   },
+  created() {
+    console.log(
+      "%cSportz Interactive",
+      "color: blue; font-style: Barlow Condensed; font-size: 2em;font-weight:900;"
+    );
+  },
 };
 </script>
 <style>

@@ -90,6 +90,7 @@
               >Upload Country Image</label
             >
             <input
+              ref="fileInput"
               @change="handleImageChange"
               accept="image/png, image/jpeg"
               class="block w-full py-1.5 px-1 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
@@ -258,7 +259,20 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           if (data.status == "success") {
+            this.isSubmitted = false;
             this.$toast.success("Details saved successfully.");
+            this.$set(this.countryForm, "imageFile", "");
+            this.$set(this.countryForm, "name", "");
+            this.$set(this.countryForm, "rank", "");
+            this.$set(this.countryForm, "imageFile", "");
+            this.imagePreviewUrl = "";
+            this.$nextTick(() => {
+              this.$v.countryForm.name.$reset();
+              this.$v.countryForm.rank.$reset();
+              this.$v.countryForm.imageFile.$reset();
+              const fileInput = this.$refs.fileInput;
+              fileInput.value = "";
+            });
             this.displayAllCountries();
           } else {
             this.$toast.error(data.message);

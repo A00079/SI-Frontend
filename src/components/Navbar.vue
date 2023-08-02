@@ -18,30 +18,31 @@
             </div>
           </a>
         </router-link>
-        <div
-          v-if="isVisiable"
-          class="flex flex row items-center justify-center cursor-pointer hover:bg-gray-100 p-2 rounded"
-        >
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-4 h-4 mr-1"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
-          </div>
-          <router-link to="/add-country">
+        <router-link to="/add-country">
+          <div
+            v-if="isVisiable"
+            class="flex flex row items-center justify-center cursor-pointer hover:bg-gray-100 p-2 rounded"
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-4 h-4 mr-1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+            </div>
+
             <div class="text-black">Add Countries</div>
-          </router-link>
-        </div>
+          </div>
+        </router-link>
       </div>
     </header>
   </div>
@@ -66,7 +67,7 @@ export default {
     };
   },
   watch: {
-    "$route"() {
+    $route() {
       this.handleAddContryVisible();
     },
   },
@@ -75,7 +76,7 @@ export default {
       if (window.location.href.split("#").length) {
         if (window.location.href.split("#")[1] == "/add-country") {
           this.isVisiable = false;
-        }else{
+        } else {
           this.isVisiable = true;
         }
       }

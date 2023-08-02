@@ -67,12 +67,12 @@
                     :src="baseUrl + items.flag"
                   />
                   <div class="flex-grow">
-                    <h2 class="text-gray-600 title-font font-bold">
+                    <h2 class="text-gray-600 title-font font-bold capitalize">
                       {{ items.name }}
                     </h2>
                     <p class="text-gray-400 text-sm">
                       Continent:
-                      <span class="text-gray-600 font-bold">{{ items.continent }}</span>
+                      <span class="text-gray-600 font-bold capitalize">{{ items.continent }}</span>
                     </p>
                     <p class="text-gray-400 text-sm">
                       Rank: <span class="text-gray-600 font-bold">{{ items.rank }}</span>

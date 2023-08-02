@@ -14,7 +14,7 @@
     >
       <option selected>{{ defaultOption }}</option>
       <template v-for="(items, index) in optionsData">
-        <option :key="index" :value="items[code]">
+        <option :key="index" :value="items[code]" class="capitalize">
           {{ items[discription] }}
         </option>
       </template>
